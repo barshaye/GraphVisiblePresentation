@@ -1,18 +1,18 @@
 package ea.barshai;
 
 public class Pair {
-  final Integer left;
-  final Integer right;
+  final int left;
+  final int right;
 
-  public Integer getLeft() {
+  public int getLeft() {
     return left;
   }
 
-  public Integer getRight() {
+  public int getRight() {
     return right;
   }
 
-  public Pair(Integer left, Integer right) {
+  public Pair(int left, int right) {
     this.left = left;
     this.right = right;
   }

@@ -4,9 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -60,12 +59,12 @@ public class Solution4 {
 
   private static void processAdges(int nodesCount, List<Pair> links, Map<Integer, Set<Integer>> adges) {
     for (int i = 1; i<=nodesCount; i++) {
-      adges.put(i, new TreeSet<>());
+      adges.put(i, new HashSet<Integer>());
       for (Pair p:links) {
-        if (p.left.equals(Integer.valueOf(i))) {
+        if (p.left== i) {
           adges.get(i).add(p.right);
         }
-        if (p.right.equals(Integer.valueOf(i))) {
+        if (p.right==i) {
           adges.get(i).add(p.left);
         }
       }
@@ -99,7 +98,7 @@ public class Solution4 {
   static List<Integer> processed = new ArrayList<>();
   private static void processChildren(int nodesCount, Integer[] values, MyTree.Color[] colors, Map<Integer, Set<Integer>> adges, MyTree parentNode,
       int parentIndex) {
-    if (parentIndex >= nodesCount) {
+    if (parentIndex > nodesCount) {
       return;
     }
     if(!processed.contains(parentIndex)) {
