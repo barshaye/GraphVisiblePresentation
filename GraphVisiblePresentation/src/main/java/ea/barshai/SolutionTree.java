@@ -15,7 +15,7 @@ import org.graphstream.graph.Graph;
 import org.graphstream.graph.implementations.SingleGraph;
 import org.graphstream.ui.view.Viewer;
 
-public class Solution4 {
+public class SolutionTree {
 
   public static MyTree solve() {
     //read the tree from STDIN and return its root as a return value of this function
