@@ -166,13 +166,9 @@ public class SolutionTreeFast {
   static List<Integer> processed = new ArrayList<>();
   public static Tree solve() {
     //read the tree from STDIN and return its root as a return value of this function
-    try {
       //System.setIn(new FileInputStream(new File("C:\\Parma\\Sber\\Test\\resources\\HakerRank_testCase8.txt")));
       //System.setIn(new FileInputStream(new File("C:\\Parma\\Sber\\Test\\resources\\HakerRank_testCase7.txt")));
-      System.setIn(new FileInputStream(new File("C:\\Parma\\Sber\\Test\\resources\\HakerRank_testCase11.txt")));
-    } catch (FileNotFoundException e) {
-      throw new RuntimeException(e);
-    }
+      System.setIn(SolutionTreeFast.class.getClassLoader().getResourceAsStream("HakerRank_testCase11.txt"));
     Scanner in = new Scanner(System.in);
     int nodesCount = in.nextInt();
     in.nextLine();
